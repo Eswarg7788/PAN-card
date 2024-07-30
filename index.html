@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="color">
+        <h3>PAN CARD: <input type="text" id="pan"></h3>
+        <button onclick="return validate()">submit</button>
+    </div>
+    
+
+    <script>
+        function validate(){
+            var sub=document.getElementById("pan").value;
+            var mit=/^[A-Z]{5}[0-9]{4}[A-Z]$/;
+            if(mit.test(sub)){
+                alert('Pin Submitted Successfully')
+                return true;
+            }
+            else{
+                alert('Invalid PAN Number')
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
